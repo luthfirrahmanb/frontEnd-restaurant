@@ -22,6 +22,7 @@ export class BookingDataComponent implements OnInit {
 
   getBookingData() {
     this.tableDataApi.find({
+      order:['id DESC'],
       include: {
         relation: 'tableBooking'
       }

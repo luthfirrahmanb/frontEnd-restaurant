@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row header">
+    <div class="col-md-3 col">Name</div>
+    <div class="col-md-3 col">Date and Time</div>
+    <div class="col-md-3 col">Number of People</div>
+    <div class="col-md-3 col">Table</div>
+  </div>
+  <div *ngFor="let table of datas">
+    <div class="row" *ngFor="let data of table.tableBooking">
+      <div class="col-md-3 col">{{data.name}}</div>
+      <div class="col-md-3 col">{{data.bookDate | date:'medium'}}</div>
+      <div class="col-md-3 col">{{data.numberOfPeople}}</div>
+      <div class="col-md-3 col">{{table.description}}</div>
+    </div>
+  </div>
+</div>

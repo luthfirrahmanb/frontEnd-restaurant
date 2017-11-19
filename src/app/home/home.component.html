@@ -1,0 +1,25 @@
+<div align="center">
+  <img src="../assets/mapTable.png" alt="Map Table">
+</div>
+
+<div class="row status" align="center">
+  <div class="col-sm-6">
+    Available Table:
+    <ul class="list-group available" *ngFor="let table of tables">
+      <div *ngIf="table.isBooked == 0">
+        <li class="list-group-item">{{table.description}}</li>
+      </div>
+    </ul>
+  </div>
+  <div class="col-sm-6">
+    Booked Table:
+    <ul class="list-group booked" *ngFor="let table of tables">
+        <div *ngIf="table.isBooked == 1">
+          <li class="list-group-item">{{table.description}}</li>
+        </div>
+      </ul>
+  </div>
+
+ 
+  
+</div>

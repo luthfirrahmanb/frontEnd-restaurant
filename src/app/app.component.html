@@ -24,6 +24,10 @@
   </div>
 </nav>
 
-<div>
+<div *ngIf="restOpenStatus == true">
   <router-outlet></router-outlet>
+</div>
+
+<div *ngIf="restOpenStatus == false" align="center" class="restaurant-status">
+  <h1>Restaurant is closed Now</h1>
 </div>

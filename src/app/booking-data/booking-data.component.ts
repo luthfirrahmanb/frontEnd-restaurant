@@ -10,10 +10,10 @@ import * as moment from 'moment';
 })
 export class BookingDataComponent implements OnInit {
 
-  datas:any;
+  datas: any;
   constructor(
     private tableDataApi: TableDataApi
-  ) { 
+  ) {
     this.getBookingData();
   }
 
@@ -22,9 +22,11 @@ export class BookingDataComponent implements OnInit {
 
   getBookingData() {
     this.tableDataApi.find({
-      order:['id DESC'],
       include: {
-        relation: 'tableBooking'
+        relation: 'tableBooking',
+        scope: {
+          order: ['id DESC']
+        }
       }
     }).subscribe((result) => {
       this.datas = result;

@@ -26,10 +26,8 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    //update status of table every 1 minutes
-    setInterval(() => {
-      this.updateTableStatus();
-    }, 1000)
+    //update when page refresh
+    this.updateTableStatus();
   }
 
   //getting All table data

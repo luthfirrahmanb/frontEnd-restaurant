@@ -30,7 +30,7 @@ export class AppComponent {
     this.today = moment().format('hh:mm A');
     this.open = '10:00 AM';
     this.closed = '10:00 PM';
-    if (this.today >= this.open || this.today < this.closed) {
+    if (this.today >= this.open && this.today < this.closed) {
       this.restOpenStatus = true;
     } else {
       this.restOpenStatus = false;
